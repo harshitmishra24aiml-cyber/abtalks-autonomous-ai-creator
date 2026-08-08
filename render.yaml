@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: nova-autonomous-ai-creator
+    runtime: docker
+    plan: free
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        sync: false
+      - key: CYCLE_MINUTES
+        value: "15"
+      - key: MAX_TOPICS_PER_CYCLE
+        value: "8"
